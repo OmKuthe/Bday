@@ -100,7 +100,7 @@ function App() {
       {currentPage === 'memoryjar' && (
         <MemoryJar 
           onNavigate={handleNavigate} 
-          onThenVsNow={handleThenVsNow}
+          onThenVSNow={handleThenVSNow}
         />
       )}
       {currentPage === 'thenvsnow' && (
