@@ -1,7 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Mail } from 'lucide-react';
-// No need to import images - use absolute paths
+
+// Import images the same way your Journey page does
+import flagImg from '../assets/images/1.png';
+import hatImg from '../assets/images/hat.png';
+import profileImg from '../assets/images/unnamed.jpg';
+import balloon1Img from '../assets/images/balloon1.png';
+import balloon2Img from '../assets/images/balloon2.png';
+import decorateFlowerImg from '../assets/images/decorate_flower.png';
+import smileyIconImg from '../assets/images/smiley_icon.png';
+import decorateImg from '../assets/images/decorate.png';
 
 const StartingPage = ({ onNavigate }) => {
   const [dateText, setDateText] = useState('');
@@ -44,10 +53,10 @@ const StartingPage = ({ onNavigate }) => {
         }}
       />
 
-      {/* Flags */}
+      {/* Flags - Using imported variables */}
       <div className="flex justify-between animate-flag-down relative z-10">
-        <img src="/src/assets/images/1.png" alt="flag" className="w-[350px] max-w-[40vw] -rotate-[10deg] -translate-x-20 translate-y-8" />
-        <img src="/src/assets/images/1.png" alt="flag" className="w-[350px] max-w-[40vw] rotate-[10deg] translate-x-20 translate-y-8 scale-x-[-1]" />
+        <img src={flagImg} alt="flag" className="w-[350px] max-w-[40vw] -rotate-[10deg] -translate-x-20 translate-y-8" />
+        <img src={flagImg} alt="flag" className="w-[350px] max-w-[40vw] rotate-[10deg] translate-x-20 translate-y-8 scale-x-[-1]" />
       </div>
 
       {/* Main Content */}
@@ -87,7 +96,7 @@ const StartingPage = ({ onNavigate }) => {
               transition={{ delay: 3, duration: 2, ease: "easeOut" }}
               className="absolute right-[-50px] lg:right-[-100px] top-[-30px] z-[-1]"
             >
-              <img src="/src/assets/images/hat.png" alt="hat" className="w-24 lg:w-32" />
+              <img src={hatImg} alt="hat" className="w-24 lg:w-32" />
             </motion.div>
           </div>
 
@@ -130,7 +139,7 @@ const StartingPage = ({ onNavigate }) => {
             className="relative"
           >
             <div className="w-64 h-64 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-black relative">
-              <img src="/src/assets/images/unnamed.jpg" alt="Khushie" className="w-full h-full object-cover" />
+              <img src={profileImg} alt="Khushie" className="w-full h-full object-cover" />
             </div>
             
             {/* Name Badge */}
@@ -142,10 +151,10 @@ const StartingPage = ({ onNavigate }) => {
 
             {/* Balloons */}
             <div className="absolute -top-16 -left-20 animate-balloon1-fast">
-              <img src="/src/assets/images/balloon1.png" alt="balloon" className="w-20 lg:w-24" />
+              <img src={balloon1Img} alt="balloon" className="w-20 lg:w-24" />
             </div>
             <div className="absolute top-32 -right-16 z-[-1] animate-balloon2-fast rotate-12">
-              <img src="/src/assets/images/balloon2.png" alt="balloon" className="w-20 lg:w-24" />
+              <img src={balloon2Img} alt="balloon" className="w-20 lg:w-24" />
             </div>
           </motion.div>
         </div>
@@ -183,7 +192,7 @@ const StartingPage = ({ onNavigate }) => {
         transition={{ delay: 6, duration: 1.5 }}
         className="absolute top-[250px] left-[50px]"
       >
-        <img src="/src/assets/images/decorate_flower.png" alt="flower" className="w-5" />
+        <img src={decorateFlowerImg} alt="flower" className="w-5" />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
@@ -191,7 +200,7 @@ const StartingPage = ({ onNavigate }) => {
         transition={{ delay: 6.3, duration: 1.5 }}
         className="absolute top-[225px] left-[540px]"
       >
-        <img src="/src/assets/images/decorate_flower.png" alt="flower" className="w-5" />
+        <img src={decorateFlowerImg} alt="flower" className="w-5" />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
@@ -199,7 +208,7 @@ const StartingPage = ({ onNavigate }) => {
         transition={{ delay: 6.6, duration: 1.5 }}
         className="absolute top-[150px] right-[235px]"
       >
-        <img src="/src/assets/images/decorate_flower.png" alt="flower" className="w-5" />
+        <img src={decorateFlowerImg} alt="flower" className="w-5" />
       </motion.div>
 
       {/* Smiley Icon */}
@@ -209,12 +218,12 @@ const StartingPage = ({ onNavigate }) => {
         transition={{ delay: 6, duration: 1.5 }}
         className="absolute bottom-[180px] left-[600px]"
       >
-        <img src="/src/assets/images/smiley_icon.png" alt="smiley" className="w-16" />
+        <img src={smileyIconImg} alt="smiley" className="w-16" />
       </motion.div>
 
       {/* Bottom Decoration */}
       <div className="absolute right-0 bottom-0">
-        <img src="/src/assets/images/decorate.png" alt="decor" className="w-24" />
+        <img src={decorateImg} alt="decor" className="w-24" />
       </div>
     </div>
   );
