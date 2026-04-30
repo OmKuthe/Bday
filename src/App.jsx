@@ -61,7 +61,7 @@ function App() {
     handleNavigate('memoryjar');
   };
 
-  const handleThenVsNow = () => {
+  const handleThenVSNow = () => {
     handleNavigate('thenvsnow');
   };
 
