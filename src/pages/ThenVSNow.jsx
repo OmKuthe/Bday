@@ -465,4 +465,4 @@ const ThenVsNow = ({ onNavigate, onLetter }) => {
   );
 };
 
-export default ThenVsNow;
+export default ThenVSNow;
