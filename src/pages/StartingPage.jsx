@@ -1,16 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Mail } from 'lucide-react';
-
-// Import all images properly
-import flagImg from '../assets/images/1.png';
-import hatImg from '../assets/images/hat.png';
-import profileImg from '../assets/images/unnamed.jpg';
-import balloon1Img from '../assets/images/balloon1.png';
-import balloon2Img from '../assets/images/balloon2.png';
-import decorateFlowerImg from '../assets/images/decorate_flower.png';
-import smileyIconImg from '../assets/images/smiley_icon.png';
-import decorateImg from '../assets/images/decorate.png';
+// No need to import images - use absolute paths
 
 const StartingPage = ({ onNavigate }) => {
   const [dateText, setDateText] = useState('');
@@ -55,8 +46,8 @@ const StartingPage = ({ onNavigate }) => {
 
       {/* Flags */}
       <div className="flex justify-between animate-flag-down relative z-10">
-        <img src={flagImg} alt="flag" className="w-[350px] max-w-[40vw] -rotate-[10deg] -translate-x-20 translate-y-8" />
-        <img src={flagImg} alt="flag" className="w-[350px] max-w-[40vw] rotate-[10deg] translate-x-20 translate-y-8 scale-x-[-1]" />
+        <img src="/src/assets/images/1.png" alt="flag" className="w-[350px] max-w-[40vw] -rotate-[10deg] -translate-x-20 translate-y-8" />
+        <img src="/src/assets/images/1.png" alt="flag" className="w-[350px] max-w-[40vw] rotate-[10deg] translate-x-20 translate-y-8 scale-x-[-1]" />
       </div>
 
       {/* Main Content */}
@@ -96,7 +87,7 @@ const StartingPage = ({ onNavigate }) => {
               transition={{ delay: 3, duration: 2, ease: "easeOut" }}
               className="absolute right-[-50px] lg:right-[-100px] top-[-30px] z-[-1]"
             >
-              <img src={hatImg} alt="hat" className="w-24 lg:w-32" />
+              <img src="/src/assets/images/hat.png" alt="hat" className="w-24 lg:w-32" />
             </motion.div>
           </div>
 
@@ -139,28 +130,28 @@ const StartingPage = ({ onNavigate }) => {
             className="relative"
           >
             <div className="w-64 h-64 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-black relative">
-              <img src={profileImg} alt="Khushie" className="w-full h-full object-cover" />
+              <img src="/src/assets/images/unnamed.jpg" alt="Khushie" className="w-full h-full object-cover" />
             </div>
             
-            {/* Name Badge - Changed to "Bday girl" */}
+            {/* Name Badge */}
             <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-birthday-pink px-6 py-2 rounded-full border-4 border-black whitespace-nowrap">
               <Heart className="inline text-red-600 mr-2" size={18} fill="red" />
               <span className="font-dancing text-2xl font-bold">Bday girl</span>
               <Heart className="inline text-red-600 ml-2" size={18} fill="red" />
             </div>
 
-            {/* Balloons - Faster animations */}
+            {/* Balloons */}
             <div className="absolute -top-16 -left-20 animate-balloon1-fast">
-              <img src={balloon1Img} alt="balloon" className="w-20 lg:w-24" />
+              <img src="/src/assets/images/balloon1.png" alt="balloon" className="w-20 lg:w-24" />
             </div>
             <div className="absolute top-32 -right-16 z-[-1] animate-balloon2-fast rotate-12">
-              <img src={balloon2Img} alt="balloon" className="w-20 lg:w-24" />
+              <img src="/src/assets/images/balloon2.png" alt="balloon" className="w-20 lg:w-24" />
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Decorative Stars - Faster animations */}
+      {/* Decorative Stars */}
       {[
         { top: 75, left: 300, width: 20, delay: 6 },
         { top: 35, right: 360, width: 15, delay: 6.2 },
@@ -173,7 +164,7 @@ const StartingPage = ({ onNavigate }) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: star.delay, duration: 1.5 }}
-          className="fixed absolute animate-star"
+          className="absolute animate-star"
           style={{
             ...star,
             width: star.width,
@@ -185,14 +176,14 @@ const StartingPage = ({ onNavigate }) => {
         />
       ))}
 
-      {/* Decorative Flowers - Faster animations */}
+      {/* Decorative Flowers */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 6, duration: 1.5 }}
         className="absolute top-[250px] left-[50px]"
       >
-        <img src={decorateFlowerImg} alt="flower" className="w-5" />
+        <img src="/src/assets/images/decorate_flower.png" alt="flower" className="w-5" />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
@@ -200,7 +191,7 @@ const StartingPage = ({ onNavigate }) => {
         transition={{ delay: 6.3, duration: 1.5 }}
         className="absolute top-[225px] left-[540px]"
       >
-        <img src={decorateFlowerImg} alt="flower" className="w-5" />
+        <img src="/src/assets/images/decorate_flower.png" alt="flower" className="w-5" />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}
@@ -208,22 +199,22 @@ const StartingPage = ({ onNavigate }) => {
         transition={{ delay: 6.6, duration: 1.5 }}
         className="absolute top-[150px] right-[235px]"
       >
-        <img src={decorateFlowerImg} alt="flower" className="w-5" />
+        <img src="/src/assets/images/decorate_flower.png" alt="flower" className="w-5" />
       </motion.div>
 
-      {/* Smiley Icon - Faster animation */}
+      {/* Smiley Icon */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 6, duration: 1.5 }}
         className="absolute bottom-[180px] left-[600px]"
       >
-        <img src={smileyIconImg} alt="smiley" className="w-16" />
+        <img src="/src/assets/images/smiley_icon.png" alt="smiley" className="w-16" />
       </motion.div>
 
       {/* Bottom Decoration */}
       <div className="absolute right-0 bottom-0">
-        <img src={decorateImg} alt="decor" className="w-24" />
+        <img src="/src/assets/images/decorate.png" alt="decor" className="w-24" />
       </div>
     </div>
   );
