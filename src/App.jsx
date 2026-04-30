@@ -5,7 +5,7 @@ import Emotions from './pages/Emotions';
 import Journey from './pages/Journey';
 import Reasons from './pages/Reasons';
 import MemoryJar from './pages/MemoryJar';
-import ThenVsNow from './pages/ThenVsNow';
+import ThenVSNow from './pages/ThenVSNow';
 import Letter from './pages/Letter';
 
 function App() {
