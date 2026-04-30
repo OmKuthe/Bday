@@ -2,7 +2,7 @@ import { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Gift, Sparkles, ArrowLeft } from 'lucide-react';
 
-const MemoryJar = ({ onNavigate, onThenVsNow }) => {
+const MemoryJar = ({ onNavigate, onThenVSNow }) => {
   const [selectedMemory, setSelectedMemory] = useState(null);
   const [poppedMemories, setPoppedMemories] = useState([]);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -475,7 +475,7 @@ const MemoryJar = ({ onNavigate, onThenVsNow }) => {
           <motion.button
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.97 }}
-            onClick={onThenVsNow}
+            onClick={onThenVSNow}
             className="px-10 py-4 rounded-full font-black text-lg flex items-center gap-3 mx-auto text-white"
             style={{ 
               background: 'linear-gradient(135deg, #C47A3E, #A0522D, #6B2E0E)',
