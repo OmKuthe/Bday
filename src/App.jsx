@@ -104,7 +104,7 @@ function App() {
         />
       )}
       {currentPage === 'thenvsnow' && (
-        <ThenVsNow 
+        <ThenVSNow 
           onNavigate={handleNavigate} 
           onLetter={handleLetter}
         />

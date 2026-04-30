@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Heart, Sparkles, ArrowLeft, ArrowRight, Play, Pause } from 'lucide-react';
 
-const ThenVsNow = ({ onNavigate, onLetter }) => {
+const ThenVSNow = ({ onNavigate, onLetter }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
